@@ -53,6 +53,24 @@ var options = {
 Session.set('slider_index',0);
 Session.set('slider_top',3);
 Template.home.events({
+    'click #mHistory':function(event,tmp){
+        $.scrollTo(".content-14", {
+            axis : 'y',
+            duration : 800
+        });
+    },
+    'click #mPosition':function(event,tmp){
+        $.scrollTo(".leagueTable", {
+            axis : 'y',
+            duration : 800
+        });
+    },
+    'click #mScorers':function(event,tmp){
+        $.scrollTo(".leagueScorers", {
+            axis : 'y',
+            duration : 800
+        });
+    },
     'click #mLogin': function (event, tmp) {
         $('#modalLogin').modal('toggle');
     },
