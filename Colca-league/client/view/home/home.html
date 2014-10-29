@@ -1,4 +1,27 @@
 <template name="home">
+
+    <div id="modalLogin" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">X</span></button>
+                    <h4 class="modal-title">Inicio de Sesión</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="userName">Usuario:</label>
+                    <input id="userName" type="text" class="form-control" placeholder="Usuario">
+                    <br>
+                    <label for="passWord">Contraseña:</label>
+                    <input id="passWord" type="password" class="form-control" placeholder="Contraseña">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <div class="page-wrapper">
 
         <header class="header-1">
@@ -17,7 +40,7 @@
                                 <li><a href="#">POSICIONES</a></li>
                                 <li><a href="#">GOLEADORES</a></li>
                                 <li><a href="#">GALERIA</a></li>
-                                <li><a href="#">LOGIN</a></li>
+                                <li id="mLogin"><a href="#">LOGIN</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -26,38 +49,17 @@
         </header>
 
         <section class="header-1-sub">
-            <div id="pt-main" class="page-transitions pt-perspective">
-                <div class="pt-page pt-page-1">
-                    <div class="background">&nbsp;</div>
-                    <div class="caption">
-                        <div class="container">
-                            <h3>Liga Colca.</h3>
-                            <p class="lead">Liga bla bla bla</p>
-                        </div>
-                    </div>
+            <div class="background bg-01">&nbsp;</div>
+            <div class="caption">
+                <div class="container">
+                    <h3>Liga Colca.</h3>
+                    <p class="lead">Liga bla bla bla</p>
                 </div>
-                <div class="pt-page pt-page-2">
-                    <div class="background">&nbsp;</div>
-                    <div class="caption">
-                        <div class="container">
-                            <h3>Fútbol rápido.</h3>
-                            <p class="lead">Practicamos el futbol rapido</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="pt-page pt-page-3">
-                    <div class="background">&nbsp;</div>
-                    <div class="caption">
-                        <div class="container">
-                            <h3>Competitividad</h3>
-                            <p class="lead">Competitividad de la liga.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="container controls">
-                    <a class="control-prev" href="#"><span class="fa fa-angle-left fa-2x"> </span></a>
-                    <a class="control-next" href="#"><span class="fa fa-angle-right fa-2x"> </span></a>
-                </div>
+            </div>
+
+            <div class="container controls">
+                <a class="control-prev" href="#"><span class="fa fa-angle-left fa-2x"> </span></a>
+                <a class="control-next" href="#"><span class="fa fa-angle-right fa-2x"> </span></a>
             </div>
         </section>
 
