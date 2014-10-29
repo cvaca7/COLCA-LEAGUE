@@ -968,13 +968,13 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
     filter: alpha(opacity=75);
     background-position: 50% 30%;
 }
-.header-1-sub .bg-01{
+.header-1-sub .bg-0{
     background-image: url("/img/slide04.jpg");
 }
-.header-1-sub .bg-02{
+.header-1-sub .bg-1{
     background-image: url("/img/slide03.jpg");
 }
-.header-1-sub .bg-03{
+.header-1-sub .bg-2{
     background-image: url("/img/slide02.jpg");
 }
 

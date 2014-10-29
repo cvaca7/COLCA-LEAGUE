@@ -50,16 +50,42 @@ var options = {
 /*****************************************************************************/
 /* Home: Event Handlers and Helpers */
 /*****************************************************************************/
+Session.set('slider_index',0);
+Session.set('slider_top',3);
 Template.home.events({
     'click #mLogin': function (event, tmp) {
         $('#modalLogin').modal('toggle');
+    },
+    'click .control-prev': function (event, tmp) {
+        var sliderTop = Session.get('slider_top');
+        var oldIndex = Session.get('slider_index');
+        var index = oldIndex - 1;
+
+        if(index < 0)
+            index = sliderTop - 1;
+
+        var newClass = 'background bg-' + index;
+        $("#bg-slider").removeClass().addClass(newClass);
+        Session.set('slider_index',index);
+
+        $("#sliderTitle").text('');
+        $("#sliderDesc").text('');
+    },
+    'click .control-next': function (event, tmp) {
+        var sliderTop = Session.get('slider_top');
+        var oldIndex = Session.get('slider_index');
+        var index = oldIndex + 1;
+
+        if(index == sliderTop)
+            index = 0;
+
+        var newClass = 'background bg-' + index;
+        $("#bg-slider").removeClass().addClass(newClass);
+        Session.set('slider_index',index);
+
+        $("#sliderTitle").text('');
+        $("#sliderDesc").text('');
     }
-    /*
-     * Example:
-     *  'click .selector': function (event, tmp) {
-     *
-     *  }
-     */
 });
 
 Template.home.helpers({
